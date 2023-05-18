@@ -11,6 +11,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 import {FormsModule} from "@angular/forms";
 import { InputMaskModule } from '@ngneat/input-mask';
+import {MatMomentDateModule} from "@angular/material-moment-adapter";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { InputMaskModule } from '@ngneat/input-mask';
   ],
   imports: [
     BrowserModule,
-    MatNativeDateModule,
+    MatMomentDateModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,

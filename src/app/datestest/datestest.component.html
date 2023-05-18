@@ -1,17 +1,18 @@
 <div class="flex flex-col w-2/5">
   <mat-form-field>
-    <input matInput [matDatepicker]="picker1" placeholder="Choose a date" [ngModel]="date1"
+    <input matInput [matDatepicker]="picker1" placeholder="Choose a date" [(ngModel)]="date1"
              (dateInput)="addEvent('input1', $event)" (dateChange)="addEvent('change1', $event)"
     >
     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
     <mat-datepicker #picker1></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
-    <input matInput [matDatepicker]="picker2" placeholder="Choose a date" [ngModel]="date2"
+    <input matInput [matDatepicker]="picker2" placeholder="Choose a date" [(ngModel)]="date2"
            [inputMask]="dateInputMask"  (dateInput)="addEvent('input2', $event)" (dateChange)="addEvent('change2', $event)"
     >
     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
     <mat-datepicker #picker2></mat-datepicker>
   </mat-form-field>
 
+  {{date1}} -<hr/> {{date2}}
 </div>

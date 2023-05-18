@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import * as moment from "moment";
 import {createMask} from "@ngneat/input-mask";
 import {MatDatepickerInputEvent} from "@angular/material/datepicker";
@@ -10,20 +10,21 @@ import {MatDatepickerInputEvent} from "@angular/material/datepicker";
 })
 export class DatestestComponent {
 
-  date1: Date  = new Date(2023,11,12);
-  date2: Date = new Date(2023,11,12);
+  date1 = moment()
+  date2 = moment()
 
   dateInputMask = createMask<Date>({
     alias: 'datetime',
     inputFormat: 'dd.mm.yyyy',
-    parser: (value: string) => {
-      const values = value.split('/');
-      const year = +values[2];
-      const month = +values[1] - 1;
-      const date = +values[0];
-      return new Date(year, month, date);
-    },
+    // parser: (value: string) => {
+    //   const values = value.split('/');
+    //   const year = +values[2];
+    //   const month = +values[1] - 1;
+    //   const date = +values[0];
+    //   return new Date(year, month, date);
+    // },
   });
+
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     console.log((`${type}: ${event.value}`));
   }
