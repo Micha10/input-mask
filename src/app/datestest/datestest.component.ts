@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import * as moment from "moment";
+import moment from "moment";
 import {createMask} from "@ngneat/input-mask";
 import {MatDatepickerInputEvent} from "@angular/material/datepicker";
 
