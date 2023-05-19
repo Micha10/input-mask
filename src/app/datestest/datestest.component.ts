@@ -10,8 +10,8 @@ import {MatDatepickerInputEvent} from "@angular/material/datepicker";
 })
 export class DatestestComponent {
 
-  date1 = moment()
-  date2 = moment()
+  date1 = moment();
+  date2 = moment();
 
   dateInputMask = createMask<moment.Moment>({
     alias: 'datetime',
